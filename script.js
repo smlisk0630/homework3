@@ -4,7 +4,7 @@ var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var specChars = ["!","@","#","$","%","^","&","*","(",")","[","]","{","}",",",".",";",":"];
 var numbers = ["0","1","2","3","4","5","6","7","8","9"];
 
-// Generate password criteria
+// Asks for user input
 function generateCriteria() {
   var pLength = parseInt(
     prompt("Choose a password length.")
