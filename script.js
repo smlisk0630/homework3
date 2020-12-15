@@ -49,6 +49,7 @@ function generateCriteria() {
 
   // Object to store user input
   var userInput = {
+    pLength: pLength,
     storeLower: storeLower,
     storeUpper: storeUpper,
     storeSpecChars: storeSpecChars,
@@ -110,7 +111,7 @@ function generatePassword() {
 
   // For loop to iterate over the password length from the userInput object, selecting random indices from the array of possible character types and concatenating those inputs into the finalPassword variable
   for (var i = 0; i < inputs.length; i++) {
-    var potentialInput = getRandom(potentialCharTypes);
+    var potentialCharTypes = getRandom(potentialCharTypes);
   
     finalPassword.push(potentialCharTypes);
   }
@@ -135,7 +136,6 @@ function writePassword() {
 
   passwordText.value = password;
 }
-// Returns undefined
-console.log(writePassword());
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
