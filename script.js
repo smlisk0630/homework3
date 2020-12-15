@@ -111,9 +111,9 @@ function generatePassword() {
 
   // For loop to iterate over the password length from the userInput object, selecting random indices from the array of possible character types and concatenating those inputs into the finalPassword variable
   for (var i = 0; i < inputs.length; i++) {
-    var potentialCharTypes = getRandom(potentialCharTypes);
+    var potentialCharType = getRandom(potentialCharTypes);
   
-    finalPassword.push(potentialCharTypes);
+    finalPassword.push(potentialCharType);
   }
 
   // Include at least one selected character type in the final password
