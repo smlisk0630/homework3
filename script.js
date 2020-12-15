@@ -1,14 +1,19 @@
 // Character arrays
 var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "X"];
-var specChars = ["!","@","#","$","%","^","&","*","(",")","[","]","{","}",",",".",";",":"];
-var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+var specChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", ",", ".", ";", ":"];
+var numbers = [0,1,2,3,4,5,6,7,8,9];
 
 // Asks for user input
 function generateCriteria() {
   var pLength = parseInt(
     prompt("Choose a password length.")
   );
+
+  if (isNaN(pLength) === true) {
+    alert("The length must be a number");
+    return;
+  }
 
   // Conditional statement to check for length of password
   if (pLength < 8 || pLength > 128) {
@@ -17,22 +22,22 @@ function generateCriteria() {
 
   // Variable to store whether user wants lowercase letters
   var storeLower = confirm(
-    "Include lowercase letters"
+    "Click OK to include lowercase letters"
   );
 
   // Variable to store whether user wants uppercase letters
   var storeUpper = confirm(
-    "Include uppercase letters"
+    "Click OK to include uppercase letters"
   );
 
   // Variable to store whether user wants special characters
   var storeSpecChars = confirm(
-    "Include special characters"
+    "Click OK to include special characters"
   );
 
   // Variable to store whether user wants numbers
   var storeNumbers = confirm(
-    "Include numbers"
+    "Click OK to include numbers"
   );
 
   // Conditional statement to check if user selects at least one character type
@@ -130,6 +135,7 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
+// Returns undefined
+console.log(writePassword());
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
