@@ -6,17 +6,17 @@ var numbers = [0,1,2,3,4,5,6,7,8,9];
 
 // Asks for user input
 function generateCriteria() {
-  var pLength = parseInt(
+  var length = parseInt(
     prompt("Choose a password length.")
   );
 
-  if (isNaN(pLength) === true) {
+  if (isNaN(length) === true) {
     alert("The length must be a number");
     return;
   }
 
   // Conditional statement to check for length of password
-  if (pLength < 8 || pLength > 128) {
+  if (length < 8 || length > 128) {
     alert("Your password must contain between 8 and 128 characters.");
   }
 
@@ -49,7 +49,7 @@ function generateCriteria() {
 
   // Object to store user input
   var userInput = {
-    pLength: pLength,
+    length: length,
     storeLower: storeLower,
     storeUpper: storeUpper,
     storeSpecChars: storeSpecChars,
