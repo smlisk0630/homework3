@@ -7,6 +7,9 @@
 
 This repository holds our third homework assignment, a refactoring of the code for a password generator website. I refactored code in the HTML file and wrote the code in the Javascript file.
 
+## Link to Deployed Application
+This application can be found at https://smlisk0630.github.io/homework3/.
+
 ## Screenshots
 ![Password Generator](assets/Password%20Generator.png)
 ![Password Length Prompt](assets/Password%20Length%20Prompt.png)
