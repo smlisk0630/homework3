@@ -43,7 +43,7 @@ function generateCriteria() {
   // Conditional statement to check if user selects at least one character type
   if (storeLower === false && storeUpper === false && storeSpecChars === false && storeNumbers === false
   ) {
-    alert("You must make at least one selection.")
+    alert("You must make at least one selection.");
     return;
   }
 
@@ -61,10 +61,10 @@ function generateCriteria() {
 
 // Function to get random array element
 function getRandom(arr) {
-  var ranInd = Math.floor(Math.random * arr.length);
-  var ranEl = arr[ranInd];
+  var randInd = Math.floor(Math.random() * arr.length);
+  var randEl = arr[randInd];
 
-  return ranEl;
+  return randEl;
 }
 
 // Function to generate password based on user input
@@ -122,7 +122,7 @@ function generatePassword() {
   }
 
   // Transform the finalPassword into a string and pass into writePassword
-  return finalPassword.join(', ');
+  return finalPassword.join('');
 }
 
 // Assignment Code
